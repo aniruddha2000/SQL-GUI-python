@@ -81,12 +81,11 @@ class Application(Frame):
             print_ans = "Wrong Password"
             self.text.delete(0.0, END)
             self.text.insert(0.0, print_ans)
+            
 
+def main():
+    Application.create_widgets()
+    Application.run_app()
 
-root = Tk()
-root.resizable(width = FALSE, height = FALSE)
-root.configure(bg = "white")
-root.title("MySQL")
-root.geometry("400x400")
-app = Application(root)
-root.mainloop()
+if __name__ == '__main__':
+    main()
